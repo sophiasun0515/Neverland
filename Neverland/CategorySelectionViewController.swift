@@ -19,11 +19,9 @@ class CategorySelectionViewController: UIViewController, UICollectionViewDelegat
         self.bubblesCollectionView.register(UINib(nibName:"BubbleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BubbleCollectionViewCell")
         self.categoryCollectionView.register(UINib(nibName:"CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
 
-//        bubblesCollectionView.delegate = self
-//        bubblesCollectionView.dataSource = self
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
-//        categoryCollectionView.flow
+
         setupBubblesView()
 
     }

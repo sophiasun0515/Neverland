@@ -27,6 +27,7 @@
 		3C2FF8D9201D353400E3BBC6 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FF8D5201D353400E3BBC6 /* LandingViewController.xib */; };
 		3C2FF8DA201D353400E3BBC6 /* RoleSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FF8D6201D353400E3BBC6 /* RoleSelectionViewController.xib */; };
 		3C6F497B201D3CB9005F4E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877521F201D21110083CD4D /* AppDelegate.swift */; };
+		E9732F36115B4DE527BCC2DF /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4AD0DD3702863591F588EB /* Pods_Neverland.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,9 @@
 		3C2FF8D4201D353400E3BBC6 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		3C2FF8D5201D353400E3BBC6 /* LandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
 		3C2FF8D6201D353400E3BBC6 /* RoleSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoleSelectionViewController.xib; sourceTree = "<group>"; };
+		7C4AD0DD3702863591F588EB /* Pods_Neverland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neverland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47858206064514AC4D040E7 /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
+		DA6556BCF872F027F3B00D61 /* Pods-Neverland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Neverland/Pods-Neverland.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9732F36115B4DE527BCC2DF /* Pods_Neverland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,7 @@
 				1877521E201D21110083CD4D /* Neverland */,
 				1877521D201D21110083CD4D /* Products */,
 				B6E0AD0F28F5E3A5F1118EFB /* Frameworks */,
+				818EDEC75138E357ABADEB16 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +118,19 @@
 			path = Neverland;
 			sourceTree = "<group>";
 		};
+		818EDEC75138E357ABADEB16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA6556BCF872F027F3B00D61 /* Pods-Neverland.debug.xcconfig */,
+				A47858206064514AC4D040E7 /* Pods-Neverland.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B6E0AD0F28F5E3A5F1118EFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C4AD0DD3702863591F588EB /* Pods_Neverland.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1877522E201D21110083CD4D /* Build configuration list for PBXNativeTarget "Neverland" */;
 			buildPhases = (
+				38A4F46A1D87E001D859889F /* [CP] Check Pods Manifest.lock */,
 				18775218201D21110083CD4D /* Sources */,
 				18775219201D21110083CD4D /* Frameworks */,
 				1877521A201D21110083CD4D /* Resources */,
+				7292C4A400CC1987527BA5FA /* [CP] Embed Pods Frameworks */,
+				9AA83D2E1C30BA281195DAF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +211,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38A4F46A1D87E001D859889F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neverland-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7292C4A400CC1987527BA5FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Neverland/Pods-Neverland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AA83D2E1C30BA281195DAF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Neverland/Pods-Neverland-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18775218201D21110083CD4D /* Sources */ = {
@@ -335,6 +414,7 @@
 		};
 		1877522F201D21110083CD4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6556BCF872F027F3B00D61 /* Pods-Neverland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -353,6 +433,7 @@
 		};
 		18775230201D21110083CD4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A47858206064514AC4D040E7 /* Pods-Neverland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
