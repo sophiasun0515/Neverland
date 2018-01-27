@@ -17,6 +17,8 @@ class LandingViewController: UIViewController {
     }
     
     @IBAction func signIn(_ sender: Any) {
+        let catVC = CategorySelectionViewController()
+        self.present(catVC, animated: true, completion: nil)
     }
     
 
