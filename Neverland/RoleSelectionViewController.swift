@@ -22,14 +22,25 @@ class RoleSelectionViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func Start_Chat(_ sender: Any) {
     }
-    */
-
+    @IBOutlet weak var Role_1: UIImageView!
+    
+    @IBOutlet weak var Name_1: UILabel!
+    
+    @IBOutlet weak var Desc_1: UITextView!
+    
+    @IBOutlet weak var Role_2: UIImageView!
+    
+    @IBOutlet weak var Name_2: UILabel!
+    
+    @IBOutlet weak var Desc_2: UITextView!
+    
+    
+    @IBOutlet weak var Role_3: UIImageView!
+    
+    @IBOutlet weak var Name_3: UILabel!
+    
+    @IBOutlet weak var Desc_3: UITextView!
+    
 }
