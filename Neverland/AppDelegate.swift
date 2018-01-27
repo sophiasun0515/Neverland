@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     // [END appdelegate_interfaces]
     var window: UIWindow?
+<<<<<<< HEAD
     
     // [START didfinishlaunching]
     func application(_ application: UIApplication,
@@ -23,6 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = "YOUR_CLIENT_ID"
         GIDSignIn.sharedInstance().delegate = self
         
+=======
+
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let homeViewController = CategorySelectionViewController()
+        window!.rootViewController = homeViewController
+        window!.makeKeyAndVisible()
+>>>>>>> origin/master
         return true
     }
     // [END didfinishlaunching]

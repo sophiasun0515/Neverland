@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		18775220201D21110083CD4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877521F201D21110083CD4D /* AppDelegate.swift */; };
 		18775222201D21110083CD4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18775221201D21110083CD4D /* ViewController.swift */; };
-		18775225201D21110083CD4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18775223201D21110083CD4D /* Main.storyboard */; };
 		18775227201D21110083CD4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18775226201D21110083CD4D /* Assets.xcassets */; };
 		1877522A201D21110083CD4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18775228201D21110083CD4D /* LaunchScreen.storyboard */; };
 		18775233201D22730083CD4D /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18775231201D22730083CD4D /* LandingViewController.swift */; };
@@ -19,6 +18,17 @@
 		1877523A201D24480083CD4D /* Trump_head_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18775239201D24480083CD4D /* Trump_head_1.png */; };
 		1877523C201D29990083CD4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1877523B201D29990083CD4D /* GoogleService-Info.plist */; };
 		616223FEE4B38522E5FD0697 /* Pods_Neverland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122A1DA4D6D0331063AFD4C9 /* Pods_Neverland.framework */; };
+		3C865C77201D227500E1845F /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C865C75201D227500E1845F /* CategorySelectionViewController.swift */; };
+		3C865C78201D227500E1845F /* CategorySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C865C76201D227500E1845F /* CategorySelectionViewController.xib */; };
+		3CA37553201D2BEA0027D001 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA37551201D2BEA0027D001 /* CategoryCollectionViewCell.swift */; };
+		3CA37554201D2BEA0027D001 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA37552201D2BEA0027D001 /* CategoryCollectionViewCell.xib */; };
+		3CA37557201D2DD40027D001 /* BubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA37555201D2DD40027D001 /* BubbleNode.swift */; };
+		3CA37558201D2DD40027D001 /* BubblesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA37556201D2DD40027D001 /* BubblesScene.swift */; };
+		3CA3755D201D2E720027D001 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA3755C201D2E720027D001 /* SpriteKit.framework */; };
+		3CA37560201D2E940027D001 /* SIFloatingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3755E201D2E940027D001 /* SIFloatingNode.swift */; };
+		3CA37561201D2E940027D001 /* SIFloatingCollectionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3755F201D2E940027D001 /* SIFloatingCollectionScene.swift */; };
+		3CA9672F201D2AAA001D8841 /* BubbleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA9672D201D2AAA001D8841 /* BubbleCollectionViewCell.swift */; };
+		3CA96730201D2AAA001D8841 /* BubbleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA9672E201D2AAA001D8841 /* BubbleCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +36,6 @@
 		1877521C201D21110083CD4D /* Neverland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neverland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1877521F201D21110083CD4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18775221201D21110083CD4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18775224201D21110083CD4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18775226201D21110083CD4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18775229201D21110083CD4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1877522B201D21110083CD4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +48,18 @@
 		1877523D201D2B4F0083CD4D /* Neverland-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neverland-Bridging-Header.h"; sourceTree = "<group>"; };
 		3EFD4F3CE7C623943063E8F2 /* Pods-Neverland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Neverland/Pods-Neverland.debug.xcconfig"; sourceTree = "<group>"; };
 		DF5A2C8C65126B2ED7C46002 /* Pods-Neverland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neverland.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neverland/Pods-Neverland.release.xcconfig"; sourceTree = "<group>"; };
+		3C865C75201D227500E1845F /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
+		3C865C76201D227500E1845F /* CategorySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectionViewController.xib; sourceTree = "<group>"; };
+		3CA37551201D2BEA0027D001 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3CA37552201D2BEA0027D001 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		3CA37555201D2DD40027D001 /* BubbleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleNode.swift; sourceTree = "<group>"; };
+		3CA37556201D2DD40027D001 /* BubblesScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblesScene.swift; sourceTree = "<group>"; };
+		3CA3755A201D2E280027D001 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		3CA3755C201D2E720027D001 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		3CA3755E201D2E940027D001 /* SIFloatingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIFloatingNode.swift; sourceTree = "<group>"; };
+		3CA3755F201D2E940027D001 /* SIFloatingCollectionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIFloatingCollectionScene.swift; sourceTree = "<group>"; };
+		3CA9672D201D2AAA001D8841 /* BubbleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCollectionViewCell.swift; sourceTree = "<group>"; };
+		3CA9672E201D2AAA001D8841 /* BubbleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				616223FEE4B38522E5FD0697 /* Pods_Neverland.framework in Frameworks */,
+				3CA3755D201D2E720027D001 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +82,7 @@
 				1877521D201D21110083CD4D /* Products */,
 				E57E3E0C5092DF259B6E5D2D /* Pods */,
 				B6E0AD0F28F5E3A5F1118EFB /* Frameworks */,
+				3CA37559201D2E280027D001 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +99,16 @@
 			children = (
 				1877521F201D21110083CD4D /* AppDelegate.swift */,
 				18775221201D21110083CD4D /* ViewController.swift */,
-				18775223201D21110083CD4D /* Main.storyboard */,
+				3CA3755F201D2E940027D001 /* SIFloatingCollectionScene.swift */,
+				3CA3755E201D2E940027D001 /* SIFloatingNode.swift */,
+				3CA37555201D2DD40027D001 /* BubbleNode.swift */,
+				3CA37556201D2DD40027D001 /* BubblesScene.swift */,
+				3CA37551201D2BEA0027D001 /* CategoryCollectionViewCell.swift */,
+				3CA37552201D2BEA0027D001 /* CategoryCollectionViewCell.xib */,
+				3CA9672D201D2AAA001D8841 /* BubbleCollectionViewCell.swift */,
+				3CA9672E201D2AAA001D8841 /* BubbleCollectionViewCell.xib */,
+				3C865C75201D227500E1845F /* CategorySelectionViewController.swift */,
+				3C865C76201D227500E1845F /* CategorySelectionViewController.xib */,
 				18775226201D21110083CD4D /* Assets.xcassets */,
 				18775228201D21110083CD4D /* LaunchScreen.storyboard */,
 				1877522B201D21110083CD4D /* Info.plist */,
@@ -95,6 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				122A1DA4D6D0331063AFD4C9 /* Pods_Neverland.framework */,
+		3CA37559201D2E280027D001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CA3755C201D2E720027D001 /* SpriteKit.framework */,
+				3CA3755A201D2E280027D001 /* SceneKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,6 +215,11 @@
 				18775238201D22840083CD4D /* RoleSelectionViewController.xib in Resources */,
 				18775225201D21110083CD4D /* Main.storyboard in Resources */,
 				1877523C201D29990083CD4D /* GoogleService-Info.plist in Resources */,
+				3CA96730201D2AAA001D8841 /* BubbleCollectionViewCell.xib in Resources */,
+				3CA37554201D2BEA0027D001 /* CategoryCollectionViewCell.xib in Resources */,
+				1877522A201D21110083CD4D /* LaunchScreen.storyboard in Resources */,
+				18775227201D21110083CD4D /* Assets.xcassets in Resources */,
+				3C865C78201D227500E1845F /* CategorySelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,24 +293,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA9672F201D2AAA001D8841 /* BubbleCollectionViewCell.swift in Sources */,
+				3CA37553201D2BEA0027D001 /* CategoryCollectionViewCell.swift in Sources */,
 				18775222201D21110083CD4D /* ViewController.swift in Sources */,
 				18775237201D22840083CD4D /* RoleSelectionViewController.swift in Sources */,
 				18775233201D22730083CD4D /* LandingViewController.swift in Sources */,
+				3CA37557201D2DD40027D001 /* BubbleNode.swift in Sources */,
+				3CA37558201D2DD40027D001 /* BubblesScene.swift in Sources */,
+				3CA37560201D2E940027D001 /* SIFloatingNode.swift in Sources */,
+				3C865C77201D227500E1845F /* CategorySelectionViewController.swift in Sources */,
 				18775220201D21110083CD4D /* AppDelegate.swift in Sources */,
+				3CA37561201D2E940027D001 /* SIFloatingCollectionScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18775223201D21110083CD4D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18775224201D21110083CD4D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18775228201D21110083CD4D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -394,8 +435,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q24729YL82;
+				DEVELOPMENT_TEAM = 54362BT7G2;
 				INFOPLIST_FILE = Neverland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.league.Neverland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,8 +455,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q24729YL82;
+				DEVELOPMENT_TEAM = 54362BT7G2;
 				INFOPLIST_FILE = Neverland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.league.Neverland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
