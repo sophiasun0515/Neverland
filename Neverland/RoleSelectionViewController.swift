@@ -96,7 +96,7 @@ class RoleSelectionViewController: UIViewController, UIImagePickerControllerDele
         customButton.layer.opacity = 1.0
         self.selectedImage = sender.imageView?.image
         if let person = name {
-            self.selectedImageName = "\(person) 2"
+            self.selectedImageName = "\(person) 3"
         }
 
     }
