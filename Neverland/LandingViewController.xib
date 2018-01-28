@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,11 +28,20 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-xc-2lD">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-xc-2lD">
                     <rect key="frame" x="107" y="442" width="106" height="37"/>
                     <color key="backgroundColor" red="0.94542991689061417" green="0.95479060913705582" blue="0.95479060913705582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="106" id="Cxp-l2-be1"/>
+                        <constraint firstAttribute="height" constant="37" id="Sxd-WI-Lee"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                     <state key="normal" title="S I G N    U P"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-fy-sCT">
                     <rect key="frame" x="107" y="366.5" width="106" height="35"/>
@@ -55,13 +63,25 @@
                         <action selector="signIn:" destination="-1" eventType="touchUpInside" id="Pcr-ya-sRQ"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Immerse yourself in a world you've never been to through roleplaying." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tY-cH-q90">
+                    <rect key="frame" x="40" y="84" width="240" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="lTu-m9-qtN"/>
+                        <constraint firstAttribute="width" constant="240" id="yBw-8h-iiX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="9gY-dz-4sK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8O3-l3-pjC"/>
+                <constraint firstItem="4tY-cH-q90" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="Kij-Hv-Z4x"/>
                 <constraint firstItem="pE7-xc-2lD" firstAttribute="top" secondItem="EVc-fy-sCT" secondAttribute="bottom" constant="40" id="ObA-av-qfO"/>
                 <constraint firstItem="TbG-Xq-Lme" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tlh-N7-hKe"/>
                 <constraint firstItem="EVc-fy-sCT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f9l-bz-TLn"/>
+                <constraint firstItem="4tY-cH-q90" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pMi-y6-Eg5"/>
                 <constraint firstItem="pE7-xc-2lD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pi6-fB-E9Z"/>
                 <constraint firstItem="EVc-fy-sCT" firstAttribute="top" secondItem="TbG-Xq-Lme" secondAttribute="bottom" constant="280" id="qCr-PG-LHs"/>
                 <constraint firstItem="TbG-Xq-Lme" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="yHv-Qa-4MG"/>

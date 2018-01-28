@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,13 +22,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Category." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIO-eE-WRY">
-                    <rect key="frame" x="23" y="33" width="289" height="32.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Destiny." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIO-eE-WRY">
+                    <rect key="frame" x="23" y="33" width="268.5" height="33"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a category of chatroom to role play in, pick your chatroom, then select a role to play." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeS-oS-Lr3">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your chatroom to role play in,  then select a role to play." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeS-oS-Lr3">
                     <rect key="frame" x="23" y="80.5" width="317" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
@@ -59,13 +58,8 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijo-wP-CqO">
-                    <rect key="frame" x="109.5" y="618" width="156" height="29"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="Play in an unlisted world"/>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="em9-wL-OeY">
-                    <rect key="frame" x="0.0" y="196.5" width="375" height="401.5"/>
+                    <rect key="frame" x="0.0" y="196.5" width="375" height="386.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sV-pH-MrO">
@@ -88,35 +82,53 @@
                         <action selector="nextTapped:" destination="-1" eventType="touchUpInside" id="GEm-5w-1mL"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-V6-1Xg">
-                    <rect key="frame" x="6" y="587" width="58" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-V6-1Xg">
+                    <rect key="frame" x="16" y="587" width="60" height="60"/>
                     <color key="backgroundColor" red="0.29803921570000003" green="0.59607843140000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="8nO-X2-OfP"/>
+                        <constraint firstAttribute="height" constant="60" id="tt3-Po-hO0"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                     <state key="normal" title="B A C K">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="backTapped:" destination="-1" eventType="touchUpInside" id="tQM-TK-8Bs"/>
                         <action selector="nextTapped:" destination="-1" eventType="touchUpInside" id="OcT-2C-dlM"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijo-wP-CqO">
+                    <rect key="frame" x="109" y="600" width="156" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="TFw-q4-ZcR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Play in an unlisted world"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="0.29803921570000003" green="0.59607843140000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Ijo-wP-CqO" firstAttribute="top" secondItem="em9-wL-OeY" secondAttribute="bottom" constant="20" id="0sT-7F-Hgx"/>
                 <constraint firstItem="oeS-oS-Lr3" firstAttribute="top" secondItem="IIO-eE-WRY" secondAttribute="bottom" constant="15" id="3ZD-J2-Pdy"/>
+                <constraint firstItem="Ijo-wP-CqO" firstAttribute="top" secondItem="em9-wL-OeY" secondAttribute="bottom" constant="17" id="3fq-ey-76s"/>
                 <constraint firstItem="em9-wL-OeY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Dh-5s-Wha"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ijo-wP-CqO" secondAttribute="bottom" constant="38" id="8Ga-Pc-8tS"/>
                 <constraint firstItem="Ijo-wP-CqO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8OL-xJ-yA9"/>
                 <constraint firstItem="zQe-P7-Ou2" firstAttribute="top" secondItem="oeS-oS-Lr3" secondAttribute="bottom" constant="5" id="DkV-Im-Yiy"/>
+                <constraint firstItem="mxS-V6-1Xg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Mr0-g1-Skj"/>
                 <constraint firstItem="oeS-oS-Lr3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23" id="OMm-2q-B33"/>
                 <constraint firstItem="zQe-P7-Ou2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RN3-M9-CMm"/>
                 <constraint firstItem="em9-wL-OeY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="TZ4-NG-cef"/>
                 <constraint firstItem="IIO-eE-WRY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23" id="Tqw-dj-Lan"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0sV-pH-MrO" secondAttribute="trailing" constant="16" id="ht1-Af-FpO"/>
                 <constraint firstAttribute="trailing" secondItem="oeS-oS-Lr3" secondAttribute="trailing" constant="35" id="kHd-C6-Dx8"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ijo-wP-CqO" secondAttribute="bottom" constant="20" id="nmW-XQ-f2B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mxS-V6-1Xg" secondAttribute="bottom" constant="20" id="lmU-Ub-WnH"/>
                 <constraint firstItem="em9-wL-OeY" firstAttribute="top" secondItem="zQe-P7-Ou2" secondAttribute="bottom" constant="25" id="qLZ-Dr-vlV"/>
                 <constraint firstItem="zQe-P7-Ou2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="teK-rG-rrC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0sV-pH-MrO" secondAttribute="bottom" constant="20" id="tm1-jy-qsJ"/>
