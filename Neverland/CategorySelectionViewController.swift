@@ -10,32 +10,25 @@ import UIKit
 import SpriteKit
 
 class CategorySelectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var bubblesCollectionView: UICollectionView!
     @IBOutlet weak var sceneBubbleView: UIView!
     
     var name = ""
     var categories = ["Popular", "Avengers", "White House", "Downton Abbey", "Tech Leaders", "Phantom of the Opera"]
-    var selectedCategory: Int = 0 {
-        didSet {
-            print("did change \(selectedCategory)")
-        }
-    }
+    var selectedCategory: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bubblesCollectionView.register(UINib(nibName:"BubbleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BubbleCollectionViewCell")
         self.categoryCollectionView.register(UINib(nibName:"CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
-
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         categoryCollectionView.setCollectionViewLayout(CategoryLayout(), animated: true)
         setupBubblesView(withBubbleIndex: 0)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(changedToStar), name: NSNotification.Name(rawValue: "ChangedSelectionToNewStar"), object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(changedCategory), name: NSNotification.Name(rawValue: "ChangedSelectionForCategory"), object: nil)
-
     }
     
     @objc func changedCategory(notif: Notification) {
@@ -43,16 +36,6 @@ class CategorySelectionViewController: UIViewController, UICollectionViewDelegat
         if let index = notif.object as? Int {
             setupBubblesView(withBubbleIndex: index)
             selectedCategory = index
-            
-//            for i in 0..<categories.count {
-//                if i != index {
-//                    if let cell = categoryCollectionView.cellForItem(at: IndexPath(row: i, section: 0)) as? CategoryCollectionViewCell {
-//                        cell.setUnactive()
-//                    }
-//                }
-//
-//            }
-            
             if let cellArrays = (categoryCollectionView.visibleCells as? [CategoryCollectionViewCell]) {
                 for cell in cellArrays {
                     if categoryCollectionView.indexPath(for: cell)?.row != index {
@@ -60,8 +43,6 @@ class CategorySelectionViewController: UIViewController, UICollectionViewDelegat
                     }
                 }
             }
-            
-
         }
     }
     
@@ -87,11 +68,7 @@ class CategorySelectionViewController: UIViewController, UICollectionViewDelegat
             safecell.setUnactive()
         }
         safecell.delegate = self
-//            if (indexPath.row == selectedCategory) {
-//            } else {
-//            }
         }
-        
         return cell
     }
     
@@ -157,11 +134,6 @@ class CategorySelectionViewController: UIViewController, UICollectionViewDelegat
     @IBAction func backTapped(_ sender: Any) {
         self.present(LandingViewController(), animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
 }
 
 class CategoryLayout: UICollectionViewFlowLayout, UICollectionViewDelegateFlowLayout {
