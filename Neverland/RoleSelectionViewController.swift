@@ -14,7 +14,6 @@ class RoleSelectionViewController: UIViewController, UIImagePickerControllerDele
         self.dismiss(animated: true, completion: nil)
     }
     
-class RoleSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePickerController: UIImagePickerController?
     var capturedImages: [UIImage] = []
     var groupChatName: String = "Popular"
