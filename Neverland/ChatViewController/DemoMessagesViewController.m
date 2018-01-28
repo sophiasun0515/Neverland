@@ -184,7 +184,7 @@
     JSQMessage * copyMessage = [JSQMessage messageWithSenderId:messageDict[@"senderId"]
                                       displayName:messageDict[@"senderId"]
                                              text:messageContent];
-    
+    copyMessage.characterImageName = [messageDict valueForKey:@"characterImageName"];
     /**
      *  Allow typing indicator to show
      */
@@ -326,6 +326,7 @@
 
 - (void)closePressed:(UIBarButtonItem *)sender
 {
+    [self.demoData detatchListener];
     [self.delegateModal didDismissJSQDemoViewController:self];
 }
 
@@ -354,7 +355,7 @@
                                              senderDisplayName:self.characterName
                                                           date:date
                                                           text:text];
-    
+    message.characterImageName = self.characterImageName;
     [self.demoData sendMessage:message];
     
     [self finishSendingMessageAnimated:YES];
@@ -496,6 +497,13 @@
         }
     }
     
+    UIImage *anotherPossibility = [UIImage imageNamed:message.characterImageName];
+    if (anotherPossibility != nil) {
+        JSQMessagesAvatarImageFactory *avatarFactory = [[JSQMessagesAvatarImageFactory alloc] initWithDiameter:kJSQMessagesCollectionViewAvatarSizeDefault];
+        JSQMessagesAvatarImage *image = [avatarFactory avatarImageWithImage:anotherPossibility];
+        return image;
+    }
+
     UIImage *possibleAvatar = [UIImage imageNamed:[NSString stringWithFormat:@"%@ 1", message.senderId]];
     if (possibleAvatar != nil) {
         JSQMessagesAvatarImageFactory *avatarFactory = [[JSQMessagesAvatarImageFactory alloc] initWithDiameter:kJSQMessagesCollectionViewAvatarSizeDefault];
@@ -505,6 +513,7 @@
         return image;
     }
     
+
     
     return [self.demoData.avatars objectForKey:kJSQDemoAvatarIdSquires];
 }
@@ -744,6 +753,11 @@
 - (void)messageView:(JSQMessagesCollectionView *)view didTapAccessoryButtonAtIndexPath:(NSIndexPath *)path
 {
     NSLog(@"Tapped accessory button!");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super viewDidDisappear:YES];
 }
 
 @end

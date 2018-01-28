@@ -56,6 +56,7 @@ static NSString * const kJSQDemoAvatarIdWoz = @"309-41802-93823";
 @property (strong, nonatomic) NSString *roomNumber;
 @property (strong, nonatomic) NSString *userName;
 @property (strong, nonatomic) NSString *senderId;
+@property (strong, nonatomic) NSString *characterImageName;
 
 - (void)sendMessage:(JSQMessage *)message;
 - (instancetype)initWithRoomNumber:(NSString *)numberString withGroupName: (NSString *)groupName withCharacterImage: (UIImage *)characterImage withcharacterImageName:(NSString *)characterImageName ;
@@ -78,5 +79,6 @@ static NSString * const kJSQDemoAvatarIdWoz = @"309-41802-93823";
 - (void)addVideoMediaMessageWithThumbnail;
 
 - (void)addAudioMediaMessage;
+- (void)detatchListener;
 
 @end

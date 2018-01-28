@@ -11,6 +11,9 @@ import AVFoundation
 
 class RoleSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, JSQDemoViewControllerDelegate {
     func didDismissJSQDemoViewController(_ vc: DemoMessagesViewController!) {
+//        NotificationCenter.default.removeObserver(vc)
+        vc.demoData.delegate = nil
+        vc.demoData = nil
         self.dismiss(animated: true, completion: nil)
     }
     

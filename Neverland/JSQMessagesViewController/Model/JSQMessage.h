@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JSQMessage : NSObject <JSQMessageData, NSCoding, NSCopying>
 @property (nonatomic, strong) NSString *GUID;
 
+@property (nonatomic, strong) NSString *characterImageName;
+
 /**
  *  Returns the string identifier that uniquely identifies the user who sent the message. 
  */

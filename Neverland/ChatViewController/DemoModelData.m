@@ -29,14 +29,20 @@
 @implementation DemoModelData
 
 - (void)sendMessage:(JSQMessage *)message {
+    
     [self.messages addObject:message];
     [[self.roomReference childByAutoId] setValue:
           @{@"message": message.text,
             @"senderId": message.senderId,
             @"senderDisplayName": message.senderDisplayName,
             @"date": [message.date description],
+            @"characterImageName": self.characterImageName,
             @"isMediaMessage":[NSNumber numberWithBool:message.isMediaMessage]
         }];
+}
+
+- (void)detatchListener {
+    [self.roomReference removeAllObservers];
 }
 
 - (instancetype)initWithRoomNumber:(NSString *)numberString withGroupName: (NSString *)groupName withCharacterImage: (UIImage *)characterImage withcharacterImageName:(NSString *)characterImageName {
@@ -46,6 +52,7 @@
         
         self.messages = [NSMutableArray new];
         self.roomNumber = numberString;
+        self.characterImageName = characterImageName;
         
         self.globalReference = [[FIRDatabase database] reference];
         self.roomReference = [[self.globalReference child:@"chatroom"] child:self.roomNumber];
@@ -61,6 +68,7 @@
                 }
             }
         }];
+        
         
         JSQMessagesAvatarImageFactory *avatarFactory = [[JSQMessagesAvatarImageFactory alloc] initWithDiameter:kJSQMessagesCollectionViewAvatarSizeDefault];
         
