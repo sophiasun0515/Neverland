@@ -58,7 +58,7 @@ static NSString * const kJSQDemoAvatarIdWoz = @"309-41802-93823";
 @property (strong, nonatomic) NSString *senderId;
 
 - (void)sendMessage:(JSQMessage *)message;
-
+- (instancetype)initWithRoomNumber:(NSString *)numberString withGroupName: (NSString *)groupName withCharacterImage: (UIImage *)characterImage withcharacterImageName:(NSString *)characterImageName ;
 @property (strong, nonatomic) NSMutableArray *messages;
 
 @property (strong, nonatomic) NSDictionary *avatars;

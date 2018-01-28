@@ -47,7 +47,7 @@
     self.title = self.groupChatName;
     
     self.inputToolbar.contentView.textView.pasteDelegate = self;
-    self.demoData = [[DemoModelData alloc] init];
+    self.demoData = [[DemoModelData alloc] initWithRoomNumber:[NSString stringWithFormat:@"%d", self.groupChatIndex] withGroupName:self.groupChatName withCharacterImage:self.characterImage withcharacterImageName:self.characterImageName];
     self.demoData.senderId = self.senderId;
     self.collectionView.accessoryDelegate = self;
     

@@ -34,6 +34,9 @@ class BubbleNode: SIFloatingNode {
         }
         node.strokeColor = node.fillColor
         
+        if Singleton.shared.bubbles[typeIndex].count == 0 {
+            Singleton.resetBubbles()
+        }
         
         node.labelNode.text = Singleton.shared.bubbles[typeIndex].removeLast()
         node.labelNode.position = CGPoint.zero
