@@ -14,6 +14,7 @@ class RoleSelectionViewController: UIViewController, UIImagePickerControllerDele
         self.dismiss(animated: true, completion: nil)
     }
     
+class RoleSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePickerController: UIImagePickerController?
     var capturedImages: [UIImage] = []
     var groupChatName: String = "Popular"
@@ -83,6 +84,7 @@ class RoleSelectionViewController: UIViewController, UIImagePickerControllerDele
         if let person = name {
             self.selectedImageName = "\(person) 2"
         }
+
     }
     
     @IBAction func didSelectSmiley(_ sender: UIButton) {
@@ -94,6 +96,7 @@ class RoleSelectionViewController: UIViewController, UIImagePickerControllerDele
         if let person = name {
             self.selectedImageName = "\(person) 2"
         }
+
     }
     
     @IBAction func didTriggerCustomGallaryPresentation(_ sender: Any) {
@@ -180,6 +183,14 @@ class RoleSelectionViewController: UIViewController, UIImagePickerControllerDele
             Role_3.layer.opacity = 1.0
         }
         self.dismiss(animated: true, completion: nil)
+
+//        self.capturedImages.append(image)
+//
+//        if self.cameraTimer?.isValid ?? false {
+//            return
+//        }
+//
+//        self.finishAndUpdate()
     }
 
     
@@ -203,6 +214,15 @@ class RoleSelectionViewController: UIViewController, UIImagePickerControllerDele
         nc.navigationBar.prefersLargeTitles = true
         self.present(nc, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func changeRole(_ sender: Any) {
+        self.present(CategorySelectionViewController(), animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
     @IBOutlet weak var Role_1: UIButton!
     

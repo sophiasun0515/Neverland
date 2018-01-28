@@ -20,14 +20,23 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Neverland" translatesAutoresizingMaskIntoConstraints="NO" id="9gY-dz-4sK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Neverland" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbG-Xq-Lme">
-                    <rect key="frame" x="25" y="231" width="269.5" height="31.5"/>
+                    <rect key="frame" x="26" y="55" width="269.5" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-xc-2lD">
+                    <rect key="frame" x="107" y="442" width="106" height="37"/>
+                    <color key="backgroundColor" red="0.94542991689061417" green="0.95479060913705582" blue="0.95479060913705582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                    <state key="normal" title="S I G N    U P"/>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-fy-sCT">
-                    <rect key="frame" x="107" y="274.5" width="106" height="35"/>
+                    <rect key="frame" x="107" y="366.5" width="106" height="35"/>
                     <color key="backgroundColor" red="0.29803921570000003" green="0.59607843140000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="UTa-jh-byW"/>
@@ -46,28 +55,22 @@
                         <action selector="signIn:" destination="-1" eventType="touchUpInside" id="Pcr-ya-sRQ"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trumpWithShadows" translatesAutoresizingMaskIntoConstraints="NO" id="QYQ-oZ-cuz">
-                    <rect key="frame" x="0.0" y="65" width="164" height="165"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="164" id="9Tp-Hr-XZV"/>
-                        <constraint firstAttribute="height" constant="165" id="UfL-kG-whQ"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="EVc-fy-sCT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="107" id="AZ8-4h-Cy3"/>
-                <constraint firstItem="QYQ-oZ-cuz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="Dwy-Ew-IE0"/>
-                <constraint firstItem="TbG-Xq-Lme" firstAttribute="top" secondItem="QYQ-oZ-cuz" secondAttribute="bottom" constant="1" id="IJT-wc-6wg"/>
-                <constraint firstItem="EVc-fy-sCT" firstAttribute="top" secondItem="TbG-Xq-Lme" secondAttribute="bottom" constant="12" id="b1g-an-UlK"/>
-                <constraint firstItem="TbG-Xq-Lme" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="cVN-vh-x23"/>
-                <constraint firstItem="QYQ-oZ-cuz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qL6-cD-1fg"/>
+                <constraint firstItem="9gY-dz-4sK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8O3-l3-pjC"/>
+                <constraint firstItem="pE7-xc-2lD" firstAttribute="top" secondItem="EVc-fy-sCT" secondAttribute="bottom" constant="40" id="ObA-av-qfO"/>
+                <constraint firstItem="TbG-Xq-Lme" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tlh-N7-hKe"/>
+                <constraint firstItem="EVc-fy-sCT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f9l-bz-TLn"/>
+                <constraint firstItem="pE7-xc-2lD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pi6-fB-E9Z"/>
+                <constraint firstItem="EVc-fy-sCT" firstAttribute="top" secondItem="TbG-Xq-Lme" secondAttribute="bottom" constant="280" id="qCr-PG-LHs"/>
+                <constraint firstItem="TbG-Xq-Lme" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="yHv-Qa-4MG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24" y="51"/>
         </view>
     </objects>
     <resources>
-        <image name="trumpWithShadows" width="415" height="415"/>
+        <image name="Neverland" width="1080" height="1920"/>
     </resources>
 </document>

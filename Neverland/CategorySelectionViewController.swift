@@ -152,6 +152,16 @@ class CategorySelectionViewController: UIViewController, UICollectionViewDelegat
         self.present(roleVC, animated: true, completion: nil)
         
     }
+    
+    
+    @IBAction func backTapped(_ sender: Any) {
+        self.present(LandingViewController(), animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
 }
 
 class CategoryLayout: UICollectionViewFlowLayout, UICollectionViewDelegateFlowLayout {
