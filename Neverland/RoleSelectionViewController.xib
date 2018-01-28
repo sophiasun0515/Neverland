@@ -124,7 +124,6 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="Start_Chat:" destination="-1" eventType="touchUpInside" id="EzJ-mE-R2J"/>
                         <action selector="changeRole:" destination="-1" eventType="touchUpInside" id="kWM-x7-I4r"/>
                     </connections>
                 </button>
